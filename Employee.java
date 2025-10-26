@@ -23,8 +23,8 @@ public class Employee {
         public void setId(int id){
             this.id=id;
         }
-        public void setName(String name) {
-            this.name = name;
+        public void setName(String name) {  
+            this.name = name;   
         }
         public void setSalary(double salary) {
             this.salary = salary;
