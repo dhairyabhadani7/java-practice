@@ -5,11 +5,27 @@ public class Employee {
         private int id;
         private String name;
         private double salary;
+        private String Department;
 
-        public Employee(int id, String name, double salary){
+          public Employee(int id, String name, double salary){
             this.id=id;
             this.name=name;
             this.salary=salary;
+            this.Department="General";
+        }
+
+        public Employee(int id, String name, double salary, String Department){
+            this.id=id;
+            this.name=name;
+            this.salary=salary;
+            this.Department=Department;
+        }
+
+        public String getDepartment() {
+            return Department;
+        }
+        public void setDepartment(String department) {
+            Department = department;
         }
         public int getId(){
             return id;
@@ -33,7 +49,9 @@ public class Employee {
             System.out.println("Employee ID: " + id);
             System.out.println("Employee Name: " + name);
             System.out.println("Employee Salary: " + salary);
+            System.out.println("Department: "+Department);
             System.out.println("------------------------");
+            
         }
         
     }
