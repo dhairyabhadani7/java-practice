@@ -1,11 +1,9 @@
 package JavaPractice;
-
-import java.lang.classfile.instruction.StoreInstruction;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.sound.sampled.SourceDataLine;
+
 
 public class StreamAPIExample {
     public static void main(String[] args) {
@@ -90,9 +88,9 @@ public class StreamAPIExample {
          }
          
          //AnyFinance employee
-         Employee anyFinancEmployee=employees.stream().filter(emp->emp.getDepartment().equals("Finance")).findAny().orElse(null);
-         if(anyFinancEmployee!=null){
-            anyFinancEmployee.displayEmployeeDetails();
+         Employee anyFinanceEmployee=employees.stream().filter(emp->emp.getDepartment().equals("Finance")).findAny().orElse(null);
+         if(anyFinanceEmployee!=null){
+            anyFinanceEmployee.displayEmployeeDetails();
          }
 
 
