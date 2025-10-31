@@ -1,6 +1,7 @@
 package JavaPractice;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 
@@ -9,7 +10,7 @@ public class StreamAPIExample {
     public static void main(String[] args) {
         List<Employee> employees = new ArrayList<>();
         employees.add(new Employee(101, "Dhairya", 100000, "IT"));
-        employees.add(new Employee(102, "Prabal", 60000, "Finance"));
+        employees.add(new Employee(102, "Prabal", 90000, "Finance"));
         employees.add(new Employee(103, "Kuchi", 70000, "Finance"));
         employees.add(new Employee(104, "Reddy", 120000, "HR"));
         employees.add(new Employee(105, "Riya", 40000, "HR"));
@@ -93,9 +94,14 @@ public class StreamAPIExample {
             anyFinanceEmployee.displayEmployeeDetails();
          }
 
-
-}
+        Map<String, List<String>> departmentWiseEmployees=employees.stream().
+                                                          filter(emp->emp.getSalary()>70000).
+                                                          collect(Collectors.groupingBy(Employee::getDepartment,Collectors.mapping(Employee::getName, Collectors.toList())));
+            
+       System.out.println("--- Employees earning > 70,000 grouped by Department ---");
+        departmentWiseEmployees.forEach((dept, names) -> System.out.println(dept + " : " + names));
 
 
     }
+}
 }
