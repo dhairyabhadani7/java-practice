@@ -7,8 +7,6 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import javax.smartcardio.CommandAPDU;
-
 public class EmployeeAnalytics {
     public static void main(String[] args) {
          List<Employee> employees = new ArrayList<>();
