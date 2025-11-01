@@ -17,5 +17,8 @@ public class FunctionalInterfaceDemo {
         // 3. Consumer takes input but returns void(Ex. forEach(), andThen()) 
         // 4. Supplier takes no input and return output(Ex. get())
 
+        //Runnable
+        //Comparator
+
     }
 }
